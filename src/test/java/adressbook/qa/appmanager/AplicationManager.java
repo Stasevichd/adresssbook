@@ -1,6 +1,5 @@
 package adressbook.qa.appmanager;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
@@ -11,6 +10,7 @@ public class AplicationManager {
   private  NavigationHelper navigationHelper;
   private  GroupHelper groupHelper;
   private SessionHelper sessionHelper;
+  private UserHelper userHelper;
 
   public void init() {
     System.setProperty("webdriver.chrome.driver", "C:\\Projects\\tools\\chromedriver.exe");
@@ -21,6 +21,7 @@ public class AplicationManager {
     groupHelper = new GroupHelper(wd);
     navigationHelper = new NavigationHelper(wd);
     sessionHelper = new SessionHelper(wd);
+    userHelper = new UserHelper(wd);
     sessionHelper.login("admin", "secret");
   }
 
@@ -37,4 +38,5 @@ public class AplicationManager {
   public NavigationHelper getNavigationHelper() {
     return navigationHelper;
   }
+  public UserHelper getUserHelper() {return userHelper;}
 }
