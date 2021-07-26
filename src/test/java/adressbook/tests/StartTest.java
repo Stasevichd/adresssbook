@@ -1,4 +1,5 @@
-import org.openqa.selenium.WebDriver;
+package adressbook.tests;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
