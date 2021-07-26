@@ -8,7 +8,7 @@ public class UserCreationTest extends TestBase{
   @Test
   public void testUserCreation(){
   app.getNavigationHelper().gotoUserCreation();
-  app.getUserHelper().fillUserCreation(new UserDate("Janes", "Bond","Rambo"));
+  app.getUserHelper().fillUserForm(new UserDate("Janes", "Bond","Rambo"));
   app.getUserHelper().submitUserCreation();
 
 

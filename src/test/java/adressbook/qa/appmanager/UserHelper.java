@@ -12,7 +12,7 @@ public class UserHelper extends HelperBase{
 
   }
 
-  public void fillUserCreation(UserDate userDate ){
+  public void fillUserForm(UserDate userDate ){
     type(By.name("firstname"),userDate.getFirstName());
     type(By.name("lastname"),userDate.getLastName());
     type(By.name("nickname"), userDate.getNickName());
@@ -32,5 +32,13 @@ public class UserHelper extends HelperBase{
 
   public void submitUserDelete() {
     wd.switchTo().alert().accept();
+  }
+
+  public void selectUserToModify() {
+    click(By.xpath("//table[@id='maintable']/tbody/tr[3]/td[8]/a/img"));
+  }
+
+  public void submitUserModify() {
+    click(By.xpath("//input[@name='update']"));
   }
 }
