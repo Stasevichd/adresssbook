@@ -1,4 +1,4 @@
-package adressbook.tests;
+package adressbook.qa.model;
 
 public class GroupDate {
   private final String name;
