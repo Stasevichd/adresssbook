@@ -1,12 +1,12 @@
 package adressbook.qa.appmanager;
-
+import org.openqa.selenium.WebDriver;
 import adressbook.qa.model.GroupDate;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class GroupHelper extends HelperBase{
 
-  public GroupHelper(ChromeDriver wd) {
+  public GroupHelper(WebDriver wd) {
     super(wd);
   }
 

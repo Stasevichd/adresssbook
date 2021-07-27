@@ -1,6 +1,6 @@
 package adressbook.qa.appmanager;
 
-
+import org.openqa.selenium.WebDriver;
 import adressbook.qa.model.UserDate;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,7 +19,7 @@ public class UserHelper extends HelperBase{
 
   }
 
-  public UserHelper(ChromeDriver wd){
+  public UserHelper(WebDriver wd){
     super(wd);
   }
   public void submitUserCreation() {
