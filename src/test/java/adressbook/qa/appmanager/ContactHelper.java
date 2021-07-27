@@ -6,34 +6,36 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-public class ContactHelper extends HelperBase{
+public class ContactHelper extends HelperBase {
 
- // private ContactDate сontactDate;
+  // private ContactDate сontactDate;
 
-  public void deleteSelectedUsers(){
+  public void deleteSelectedUsers() {
     click(By.xpath("//input[@value='Delete']"));
 
   }
 
-  public void fillContactForm(ContactDate  contactDate,boolean creation){
+  public void fillContactForm(ContactDate contactDate, boolean creation) {
     type(By.name("firstname"), contactDate.getFirstName());
     type(By.name("lastname"), contactDate.getLastName());
     type(By.name("nickname"), contactDate.getNickName());
-    if (creation){
+    if (creation) {
       new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactDate.getGroup());
-    }else{
+    } else {
       Assert.assertFalse(isElementPresent(By.name("new_group")));
     }
 
   }
 
-  public ContactHelper(WebDriver wd){
+  public ContactHelper(WebDriver wd) {
     super(wd);
   }
+
   public void submitContactCreation() {
     click(By.name("submit"));
   }
-  public void selectUser(){
+
+  public void selectUser() {
     click(By.name("selected[]"));
   }
 
