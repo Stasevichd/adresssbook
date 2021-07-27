@@ -24,14 +24,14 @@ public class AplicationManager {
 
   public void init() {
 
-    if (browser == BrowserType.FIREFOX){
+    if (browser.equals(BrowserType.FIREFOX)){
       System.setProperty("webdriver.gecko.driver", "C:\\Projects\\tools\\geckodriver.exe");
       wd = new FirefoxDriver();
-    }else {if (browser == BrowserType.CHROME){
+    }else {if (browser.equals(BrowserType.CHROME)){
       System.setProperty("webdriver.chrome.driver", "C:\\Projects\\tools\\chromedriver.exe");
       wd = new ChromeDriver();
       wd.manage().window().maximize();
-    }else if(browser == BrowserType.EDGE){
+    }else if(browser.equals(BrowserType.EDGE)){
       System.setProperty("webdriver.edge.driver", "C:\\Projects\\tools\\msedgedriver.exe");
       wd = new EdgeDriver();
     }
