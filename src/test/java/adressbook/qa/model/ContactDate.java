@@ -1,14 +1,16 @@
 package adressbook.qa.model;
 
-public class UserDate {
+public class ContactDate {
   private final String firstName;
   private final String lastName;
   private final String nickName;
+  private final String group;
 
-  public UserDate(String firstName, String lastName, String nickName) {
+  public ContactDate(String firstName, String lastName, String nickName, String group) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.nickName = nickName;
+    this.group = group;
   }
 
   public String getFirstName() {
@@ -21,5 +23,9 @@ public class UserDate {
 
   public String getNickName() {
     return nickName;
+  }
+
+  public String getGroup() {
+    return group;
   }
 }
